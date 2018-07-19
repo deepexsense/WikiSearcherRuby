@@ -1,0 +1,23 @@
+
+<div class="container">
+
+  <div class="starter-template">
+    <h1>Wikipedia Searcher</h1>
+    <p class="lead">Click the random button for a random wiki story. <br> Or enter what you want in the search box above.</p>
+    <p id="notice"><%= notice %></p>
+    <ul id="results">
+      <% @result_array.each do |result| %>
+
+        <a href= <%= @wiki_page+result[1][:pageid].to_s %>>
+          <li>
+            <h1><%= result[1][:title] %></h1>
+            <p> <%= result[1][:extract] %></p>
+          </li>
+        </a>
+
+      <% end %>
+    </ul>
+  </div>
+
+</div>
+
